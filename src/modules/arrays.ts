@@ -1,2 +1,2 @@
 export const getRandomItem = <T>(arr: T[]): T =>
-    arr[Math.floor(Math.random() * arr.length - 1)]
+    arr[Math.floor(Math.random() * (arr.length - 1))]
