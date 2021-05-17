@@ -14,7 +14,7 @@
 ## Пример использования
 
 <p align="center">
-  <img width="477px" height="331px" src="./assets/example@2x.jpg" alt="Example" />
+  <img width="484px" height="340px" src="./assets/example@2x.jpg" alt="Example" />
 </p>
 
 ## Настройка
