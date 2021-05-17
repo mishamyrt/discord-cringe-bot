@@ -1,4 +1,4 @@
-import { RequestInit } from 'node-fetch';
+import { RequestInit } from 'node-fetch'
 
 /**
  * otkritkiok.ru days of week names

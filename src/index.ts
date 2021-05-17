@@ -1,7 +1,7 @@
-import 'module-alias/register';
-import { randomItem } from '@modules/arrays';
-import { postMessage } from '@modules/discord';
-import { getDayPostcards } from '@modules/postcards';
+import 'module-alias/register'
+import { randomItem } from '@modules/arrays'
+import { postMessage } from '@modules/discord'
+import { getDayPostcards } from '@modules/postcards'
 
 const url = process.env.WEBHOOK_URL
 

@@ -1,4 +1,4 @@
-import fetch, { RequestInit } from 'node-fetch';
+import fetch, { RequestInit } from 'node-fetch'
 
 const options: RequestInit = {
   method: 'POST',
