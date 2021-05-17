@@ -1,24 +1,18 @@
 import 'module-alias/register'
-import { randomItem } from '@modules/arrays'
-import { postMessage } from '@modules/discord'
-import { getDayPostcards } from '@modules/postcards'
-
-const url = process.env.WEBHOOK_URL
-
-const envError = 'Please specify a WEBHOOK_URL environment variable'
+import { main } from './app'
 
 function handleError (err: Error): never {
   console.error(err)
   process.exit(1)
 }
 
+const url = process.env.WEBHOOK_URL
 if (!url) {
-  handleError(new Error(envError))
+  handleError(new Error(
+    'Please specify a WEBHOOK_URL environment variable'
+  ))
 }
 
-const day = new Date().getDay()
-
-getDayPostcards(day)
-  .then(randomItem)
-  .then(postMessage(url))
+main(url)
+  .then(console.log)
   .catch(handleError)
