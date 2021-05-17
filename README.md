@@ -1,6 +1,13 @@
 <p align="center">
   <img height="159px" width="317px" src="./assets/logo@2x.png" alt="Logo" />
+  <br>
+  <a href="https://github.com/mishamyrt/discord-cringe-bot/actions/workflows/api.yaml">
+    <img src="https://github.com/mishamyrt/discord-cringe-bot/actions/workflows/api.yaml/badge.svg" alt="API availability" />
+  </a>
 </p>
+
+[chat-img]: https://img.shields.io/badge/Gitter-Join_the_PostCSS_chat-brightgreen.svg
+[chat]:     https://gitter.im/postcss/postcss
 
 Бот, который отправляет открытки с сайта [открыткиок](https://otkritkiok.ru) в канал Discord через веб–хук. Для отправки используется запуск по расписанию GitHub Actions.
 
