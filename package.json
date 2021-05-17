@@ -6,7 +6,8 @@
   "private": true,
   "dependencies": {
     "node-fetch": "^2.6.1",
-    "ts-node": "^9.1.1"
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
   },
   "devDependencies": {
     "@types/node-fetch": "^2.5.10"
