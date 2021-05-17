@@ -23,6 +23,8 @@
 
 Процесс описан в [инструкции Discord](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks). Нужно дойти до шага с кнопкой «Copy Webhook URL». Скопируйте (а лучше сохраните) ссылку, которая копируется при нажатии на эту кнопку.
 
+На аватарку можете поставить [котика](./assets/avatar.jpg) (как в примере).
+
 ### 2. Форкните этот репозиторий
 
 Нажмите «Fork» в верхней части [странице проекта на GitHub](https://github.com/mishamyrt/cross-code-review).
