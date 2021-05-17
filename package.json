@@ -5,6 +5,7 @@
   "main": "index.js",
   "private": true,
   "dependencies": {
+    "module-alias": "^2.2.2",
     "node-fetch": "^2.6.1",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.4"
@@ -14,6 +15,9 @@
   },
   "scripts": {
     "start": "npx ts-node src/index.ts"
+  },
+  "_moduleAliases": {
+    "@modules": "src/modules"
   },
   "keywords": [],
   "author": "",

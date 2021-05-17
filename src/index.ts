@@ -1,13 +1,24 @@
-import { getForDay } from './modules/postcards';
-import { getRandomItem } from './modules/arrays';
-import { postMessage } from './modules/discord';
+import 'module-alias/register';
+import { getDayPostcards } from '@modules/postcards';
+import { getRandomItem } from '@modules/arrays';
+import { postMessage } from '@modules/discord';
 
 const url = process.env.WEBHOOK_URL
 
-if (!url) {
-    process.exit(1)
+function handleError (err: Error): never {
+  console.error(err)
+  process.exit(1)
 }
 
-getForDay(new Date().getDay())
-    .then(getRandomItem)
-    .then(postMessage(url))
+if (!url) {
+  handleError(
+    new Error('Please specify a WEBHOOK_URL environment variable')
+  )
+}
+
+const day = new Date().getDay()
+
+getDayPostcards(day)
+  .then(getRandomItem)
+  .then(postMessage(url))
+  .catch(handleError)
