@@ -1,0 +1,17 @@
+name: Quality assurance
+
+on: push
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Install dependencies
+      run: npm ci
+    - name: Linting
+      run: npm run lint
+    - name: Test
+      run: npm test
+
