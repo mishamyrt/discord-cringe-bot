@@ -1,5 +1,5 @@
 <p align="center">
-  <img height="159px" width="317px" src="./assets/logo@2x.png" alt="Logo" />
+  <img height="217px" width="389px" src="./assets/logo@2x.png" alt="Logo" />
   <br>
   <a href="https://github.com/mishamyrt/discord-cringe-bot/actions/workflows/api.yaml">
     <img src="https://github.com/mishamyrt/discord-cringe-bot/actions/workflows/api.yaml/badge.svg" alt="API availability" />
