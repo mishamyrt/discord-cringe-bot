@@ -1,7 +1,8 @@
 import 'module-alias/register';
-import { getDayPostcards } from '@modules/postcards';
-import { getRandomItem } from '@modules/arrays';
+// import { getDayPostcards } from '@modules/postcards';
+import { randomItem } from '@modules/arrays';
 import { postMessage } from '@modules/discord';
+import { getDayPostcards } from '@modules/postcards';
 
 const url = process.env.WEBHOOK_URL
 
@@ -19,6 +20,6 @@ if (!url) {
 const day = new Date().getDay()
 
 getDayPostcards(day)
-  .then(getRandomItem)
+  .then(randomItem)
   .then(postMessage(url))
   .catch(handleError)
