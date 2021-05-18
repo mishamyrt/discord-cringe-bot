@@ -8,7 +8,7 @@ on:
     - cron:  "0 00 * * *"
 
 jobs:
-  post:
+  test:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
