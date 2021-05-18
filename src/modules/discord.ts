@@ -8,14 +8,20 @@ const options: RequestInit = {
 }
 
 /**
- * Posts message to Discord webhook
- * @param url - Discord webhook url
+ * Posts image to Discord webhook
+ * @param hookUrl - Discord webhook url address
+ * @param imageUrl - Image URL address
  */
-export const postMessage = (url: string) =>
-  async function (content: string) {
-    const res = await fetch(url, {
-      ...options,
-      body: JSON.stringify({ content })
+export async function postImage (hookUrl: string, imageUrl: string) {
+  const res = await fetch(hookUrl, {
+    ...options,
+    body: JSON.stringify({
+      embeds: [{
+        image: {
+          url: imageUrl
+        }
+      }]
     })
-    return res.ok
-  }
+  })
+  return res
+}

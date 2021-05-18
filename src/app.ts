@@ -1,5 +1,5 @@
 import { randomItem } from '@modules/arrays'
-import { postMessage } from '@modules/discord'
+import { postImage } from '@modules/discord'
 import { getDayPostcards } from '@modules/postcards'
 import { getFileSize } from '@modules/requests'
 
@@ -15,9 +15,12 @@ export async function main (url: string) {
   while (true) {
     const postcard = randomItem(postcards)
     const fileSize = await getFileSize(postcard)
-    // NOTE: Check if file is not a video and lesser than 1 mb. Anotherwise Discord will not embed it
-    if (fileSize < 1024 && !postcard.includes('.mp4')) {
-      await postMessage(postcard)
+    // NOTE: Check if file is not a video and lesser than 400 kb. Anotherwise Discord will not embed it
+    if (fileSize < 400 && !postcard.includes('.mp4')) {
+      console.log(`URL: ${postcard}`)
+      console.log(`File size: ${fileSize}`)
+      console.log('Posting...')
+      await postImage(url, postcard)
       break
     }
   }
