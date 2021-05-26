@@ -6,13 +6,22 @@ function handleError (err: Error): never {
   process.exit(1)
 }
 
-const url = process.env.WEBHOOK_URL
-if (!url) {
-  handleError(new Error(
-    'Please specify a WEBHOOK_URL environment variable'
-  ))
+async function app () {
+  const urlInput = process.env.WEBHOOK_URL
+  if (!urlInput) {
+    handleError(new Error(
+      'Please specify a WEBHOOK_URL environment variable'
+    ))
+  }
+  const urls = urlInput.split(',')
+
+  for (const url of urls) {
+    try {
+      await main(url)
+    } catch (err) {
+      handleError(err)
+    }
+  }
 }
 
-main(url)
-  .then(console.log)
-  .catch(handleError)
+app()
