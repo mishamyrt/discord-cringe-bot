@@ -18,7 +18,7 @@ async function app () {
   for (const url of urls) {
     try {
       await main(url)
-    } catch (err) {
+    } catch (err: any) {
       handleError(err)
     }
   }
